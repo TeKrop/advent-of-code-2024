@@ -1,5 +1,5 @@
-# 🎅 Advent of Code 20XX
-Advent of Code 20XX solutions in Python. It uses `uv` for dependencies management, `typer` for CLI commands, and `pyinstrument` for profiling. My goal is to write the most readable, understandable and maintainable solutions IMO, which are not necessarily the most performant ones.
+# 🎅 Advent of Code 2024
+Advent of Code 2024 solutions in Python. It uses `uv` for dependencies management, `typer` for CLI commands, and `pyinstrument` for profiling. My goal is to write the most readable, understandable and maintainable solutions IMO, which are not necessarily the most performant ones.
 
 ## 💽 Install
 The project uses `uv` for dependencies management, install it first : https://docs.astral.sh/uv/getting-started/installation/
