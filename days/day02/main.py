@@ -34,37 +34,28 @@ class Report:
 
     @property
     def is_stable(self) -> bool:
-        levels_iterator = iter(self.levels)
-        previous_value: int = next(levels_iterator)
         is_increasing: bool | None = None
 
-        for value in levels_iterator:
-            difference = value - previous_value
+        for previous, current in zip(self.levels, self.levels[1:]):
+            difference = current - previous
+
             if not (1 <= abs(difference) <= 3):
                 return False
 
             if is_increasing is None:
                 is_increasing = difference > 0
 
-            if (value > previous_value and not is_increasing) or (
-                value < previous_value and is_increasing
+            if (difference > 0 and not is_increasing) or (
+                difference < 0 and is_increasing
             ):
                 return False
-
-            previous_value = value
 
         return True
 
     @property
     def is_stable_by_tolerating_bad_level(self) -> bool:
-        if self.is_stable:
-            return True
-
-        nb_levels = len(self.levels)
-
-        for i in range(nb_levels):
-            levels_subset = self.levels[:i] + self.levels[i + 1 :]
-            if Report(levels_subset).is_stable:
-                return True
-
-        return False
+        return self.is_stable or any(
+            Report(levels_subset).is_stable
+            for i in range(len(self.levels))
+            if (levels_subset := self.levels[:i] + self.levels[i + 1 :])
+        )
