@@ -25,7 +25,7 @@ class AbstractPuzzleSolver(ABC):
         self.__get_puzzle_data()
 
     @cached_property
-    def line(self):
+    def line(self) -> str:
         return self.lines[0]
 
     def __get_puzzle_data(self) -> list[str]:
