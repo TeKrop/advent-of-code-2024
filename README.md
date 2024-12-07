@@ -1,6 +1,6 @@
 # 🎅 Advent of Code 2024
 ![Made with Python](https://img.shields.io/badge/Python-v3.13-blue?logo=python&logoColor=white)
-[![AoC 2024](https://img.shields.io/badge/2024-⭐%2012-gray?logo=adventofcode&labelColor=8a2be2)](https://adventofcode.com/2024)
+[![AoC 2024](https://img.shields.io/badge/2024-⭐%2014-gray?logo=adventofcode&labelColor=8a2be2)](https://adventofcode.com/2024)
 [![License: MIT](https://img.shields.io/github/license/TeKrop/advent-of-code-2024)](https://github.com/TeKrop/advent-of-code-2024/blob/main/LICENSE)
 
 Advent of Code 2024 solutions in Python. It uses `uv` for dependencies management, `typer` for CLI commands, and `pyinstrument` for profiling. My goal is to write the most readable, understandable and maintainable solutions IMO, which are not necessarily the most performant ones.
